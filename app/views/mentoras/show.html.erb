@@ -1,0 +1,26 @@
+<h1>Mentora</h1>
+<div>
+  <p>
+    <strong>Nome:</strong>
+    <%= @mentora.name %>
+  </p>
+  <p>
+    <strong>Email:</strong>
+    <%= @mentora.email %>
+  </p>
+
+  <p>
+    <strong>Habilidades::</strong>
+    <%= @mentora.habilities %>
+  </p>
+
+  <p>
+    <strong>Telefone:</strong>
+    <%= @mentora.phone %>
+  </p>
+</div>
+
+<%= link_to "Deletar", mentora_path(@mentora), data: { turbo_method: :delete,
+                                                       turbo_confirm: "Você tem certeza?" } %>
+
+<a href="/mentoras">Voltar</a>

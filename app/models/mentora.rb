@@ -1,0 +1,4 @@
+class Mentora < ApplicationRecord
+
+
+end

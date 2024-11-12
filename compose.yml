@@ -1,0 +1,19 @@
+services:
+  web:
+    tty: true
+    stdin_open: true
+    build: .
+    working_dir: /app
+    container_name: web
+    command: bash -c "rm -f tmp/pids/server.pid && bin/setup && rails server -b 0.0.0.0"
+    environment:
+      RAILS_ENV: development
+      POSTGRES_HOST: postgres
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+      - rubygems:/usr/local/bundle
+
+volumes:
+  rubygems:

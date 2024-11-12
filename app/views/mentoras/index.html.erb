@@ -1,0 +1,19 @@
+<h1>Mentoras</h1>
+<ul>
+  <% @mentoras.each do |mentora| %>
+  <li>
+    <%= mentora.name %>
+    <a href="/mentoras/<%= mentora.id %>">Ver mais</a>
+    <a href="/mentoras/<%= mentora.id %>/edit">Editar</a>
+
+  </li>
+<% end %>
+
+</ul>
+
+
+
+
+<div>
+  <a href="/mentoras/new">Cadastrar nova mentora</a>
+</div>
