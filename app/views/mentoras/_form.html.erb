@@ -1,0 +1,19 @@
+<%= form_with model: @mentora do |form| %>
+
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br/>
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+  <br/>
+  <%= form.label :phone %>
+  <%= form.text_field :phone %>
+  <br/>
+  <%= form.label :habilities %>
+  <%= form.text_field :habilities %>
+  <br/>
+  <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>
